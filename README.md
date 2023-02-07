@@ -42,3 +42,11 @@ python manage.py check Academico
 ```
 
 Cabe mencionar que tuve que cambiar el nombre de la App en la class AcademicoConfig del archivo "apps.py" de "Academico" a 'Aplicaciones.Academico" por un error de reconocimiento.
+
+### Migración y Creación de la Base de Datos
+
+Para poder hacer la migración de nuestro modelo a una base de datos usamos el comando:
+
+```
+python manage.py migrate
+```
