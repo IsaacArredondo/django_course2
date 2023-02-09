@@ -49,4 +49,17 @@ Para poder hacer la migración de nuestro modelo a una base de datos usamos el c
 
 ```
 python manage.py migrate
+python manage.py makemigrations #con este comando creamos el archivo "0001_initial.py"
+```
+
+Ahora para ver la sentencia del modelo creado en formato SQL usamos el comando:
+
+```
+python manage.py sqlmigrate Academico 0001
+```
+
+Y para ejecutr el archivo "0001_initial.py" y verlo reflejado en la base de datos aplicamos nuevamente el comando:
+
+```
+python manage.py migrate
 ```
