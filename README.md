@@ -109,3 +109,14 @@ En caso de salir de la consola interactiva y volver a entrar, para poder modific
 cur = Curso.objects.get(id=2)
 print(cur.nombre) # para verificar
 ```
+
+## Leer todos los datos
+
+```
+cursos = Curso.objects.all()
+print(cursos) # imprime objects
+print(cursos[2]) # imprime el object 2
+print(cursos[2].nombre)  # imprime el nombre del object 2
+cursos.query.__str__() # ver la sentencia select de todos los atributos
+print(len(cursos)) # ver la cantidad de cursos
+```
