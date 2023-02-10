@@ -63,3 +63,32 @@ Y para ejecutr el archivo "0001_initial.py" y verlo reflejado en la base de dato
 ```
 python manage.py migrate
 ```
+
+## Insertar valores en la tabla de nuestro modelo
+
+Primero debemos ingresar al shell de python desde la terminal con el comando:
+
+```
+python manage.py shell
+```
+
+Ahora importamos el modelo Curso en la consola interactiva con el comando:
+
+```
+from Aplicaciones.Academico.models import Curso
+```
+
+Y creamos e insertamos tres cursos, lo que en SQL sería 'INSERT INTO', aquí sería:
+
+```
+cur1 = Curso(nombre = 'Programacion Avanzada', creditos = 4)
+cur1.save()
+cur2 = Curso(nombre = 'Teoria de Bases de Datos', creditos = 5)
+cur2.save()
+```
+
+Y una opción en una sola linea puede ser solo con el comandoÑ
+
+```
+cur3 = Curso.objects.create(nombre = 'Redes y conectividad', creditos = 5)
+```
