@@ -92,3 +92,20 @@ Y una opción en una sola linea puede ser solo con el comandoÑ
 ```
 cur3 = Curso.objects.create(nombre = 'Redes y conectividad', creditos = 5)
 ```
+
+## Actualizacion de datos
+
+Para actualizar los datos de un registro podemos dirigirnos a sus atributos, por ejemplo:
+
+```
+cur4 = Curso.objects.create(nombre = 'Sistemas Operativos', creditos = 3)
+cur4.creditos = 5
+cur4.save()
+```
+
+En caso de salir de la consola interactiva y volver a entrar, para poder modificar un registro de la base de datos, podemos usar la siguiente sentencia para traerlo a la consola, por ejemplo:
+
+```
+cur = Curso.objects.get(id=2)
+print(cur.nombre) # para verificar
+```
