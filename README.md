@@ -127,5 +127,9 @@ print(len(cursos)) # ver la cantidad de cursos
 
 Esto se debe haer dentro de la consola interactiva.
 
-
+```
+cursoEliminar = Curso.objects.get(id=3)
+print(cursoEliminar.nombre)
+cursoEliminar.delete()
+```
 
